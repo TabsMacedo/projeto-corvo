@@ -1,0 +1,387 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto+Slab:wght@100..900&display=swap');
+:root {
+    --laranjaPrimario: #FF5722; /* 60% */
+    --azulSegundario: #0455BF; /* 30% */
+    --laranjaTerceario: #FFF8F2; /* 10% */
+    --branco: #f8f9fa;
+    --cinza: #f1f1f1;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: var(--branco);
+    font-family: "Lato", sans-serif !important;
+    font-weight: 300 !important;
+    font-style: normal;
+}
+
+.header {
+   background: url(../assets/fundo.png);
+    height: 600px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 600px;
+    background-color: #00132bca; /* Use rgba para transparência */
+    z-index: 1;
+}
+
+
+.navbar {
+    background: transparent;
+    z-index: 2;
+    position: relative;
+    margin: auto 36px;
+    position: fixed;
+}
+.navbar-brand{
+    display: flex;
+    align-items: center;
+    /* background-color: aqua; */
+    gap: 16px;
+    font-family: "Roboto Slab", serif !important;
+    font-weight: 600;
+    font-size: 16px;
+    margin-top: 8px;
+}
+#logo-principal {
+    width: 60px;
+    height: 60px;
+}
+.navbar-toggler {
+    border: none;
+}
+.navbar-toggler-icon {
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"%3E%3Cpath stroke="rgba(255,255,255,1)" stroke-width="2" d="M5 6h20M5 14h20M5 22h20"/%3E%3C/svg%3E');
+}
+
+.navbar-nav .nav-item {
+    margin: 0 8px;
+}
+
+.navbar-nav .nav-link {
+    position: relative;
+    color: var(--branco);
+    padding: 8px;
+    border-radius: 8px;
+    transition: 0.5s ease-out;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--branco);
+}
+
+.navbar-nav .nav-link::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s;
+    border-bottom: 2px solid var(--laranjaPrimario);
+    transform: scale(0.1, 1);
+}
+
+.navbar-nav .nav-link:hover::before {
+    opacity: 1;
+    transform: scale(1, 1);
+}
+
+
+.nav-intro {
+    display: flex;
+    height: 60%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    color: var(--branco);
+    text-align: center;
+    font-weight: 700;
+    text-shadow: 0 4px 8px black;
+    position: relative;
+}
+
+.nav-intro h2 {
+    font-size: 42px;
+    font-family: "Roboto Slab", serif;
+    text-transform: uppercase;
+}
+
+.nav-intro p {
+    margin-top: 8px;
+    font-size: 28px;
+}
+
+.btn.btn-one {
+    padding: 16px;
+    width: 100px; /* Adicione uma largura fixa para evitar que o hover empurre os itens */
+    text-align: center; /* Centralize o texto dentro do botão */
+    margin-left: 16px; /* Adicione um espaço entre o botão e o menu */
+    color: #FFF;
+    transition: all 0.3s;
+    position: relative;
+    cursor: pointer;
+}
+
+.btn-one span {
+    transition: all 0.3s;
+}
+
+.btn-one::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-top-color: var(--laranjaPrimario);
+    border-bottom-color: var(--laranjaPrimario);
+    transform: scale(0.1, 1);
+}
+
+.btn-one:hover span {
+    letter-spacing: 2px;
+    color: var(--branco);
+}
+
+.btn-one:hover::before {
+    opacity: 1; 
+    transform: scale(1, 1); 
+}
+
+.btn-one::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: all 0.3s;
+    background-color: rgba(255,255,255,0.1);
+}
+
+.btn-one:hover::after {
+    opacity: 0; 
+    transform: scale(0.1, 1);
+}
+  
+/* Sessão sobre */
+.about-section{
+    background-color: var(--cinza);
+    margin: 0;
+    height: auto;
+    padding: 92px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 62px;
+}
+#title-about{
+    text-align: center;
+    font-size: 40px;
+    background-color: #f1f1f1;
+    /* color: white; */
+    line-height: 0;
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.about-us{
+    width: 100%;
+    /* fazendo o uso do flexbox (linha) */
+    display: flex;
+    background-color: #f1f1f1;
+    justify-content: center;
+    align-items: center;
+    gap: 72px;
+}
+.us__left{
+    width: 40%;
+    font-size: 20px;
+}
+.us__left p{
+    font-size: 24px;
+}
+.us__right{
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+}
+.us__right li{
+    font-size: 18px;
+}
+/* Sessão "Nossos valores" */
+.values-section{
+    padding: 72px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.section__title {
+    text-align: center;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    display: inline-block; /* Ajusta a largura da div ao conteúdo */
+    border-bottom: var(--azulSegundario) 4px solid;
+}
+
+.section__title h2 {
+    width: auto;
+    display: inline-block; /* Faz com que o h2 tenha largura baseada no conteúdo */
+    margin: 0; /* Remove margens padrão que podem causar desalinhamento */
+}
+.our-values{
+    width: 100%;
+    display: flex;
+    margin: 72px;
+    justify-content: center;
+    gap: 32px;
+    flex-wrap: wrap;
+    font-family: "Lato", sans-serif;
+}
+.values-item{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+.values-item p{
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color:  #666;;
+}
+/* Sessão "como participar" */
+/* Grid pai */
+/* Sessão "Como Participar" */
+.section-part {
+    background-color: var(--cinza);
+    padding: 72px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    gap: 40px; /* Aumenta o espaçamento entre os elementos */
+}
+
+/* Título da seção */
+.part-title {
+    grid-column: 1 / -1; /* Faz com que o título ocupe toda a largura do grid */
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+}
+.part-title h2{
+    display: inline-block; /* Faz com que o h2 tenha largura baseada no conteúdo */
+    border-bottom: var(--azulSegundario) 4px solid; /* Borda inferior laranja */
+    
+}
+
+/* Container para as cards */
+.part-cards {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 92px; /* Espaçamento entre as cards */
+}
+
+/* Estilo das cards individuais */
+.card__item {
+    flex: 1 1 calc(33.333% - 32px); /* Cards responsivos que ocupam um terço da largura */
+    max-width: 350px; /* Limita a largura máxima das cards */
+    background-color: var(--branco);
+    border: 2px solid var(--azulSegundario);
+    border-radius: 8px;
+    padding: 24px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card__item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+/* Ícone dentro da card */
+.card__item .icon {
+    font-size: 48px; /* Tamanho do ícone */
+    color: var(--azulSegundario); /* Cor azul secundária para o ícone */
+    margin-bottom: 16px;
+}
+
+/* Título dentro da card */
+.card__item h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--azulSegundario);
+    margin-bottom: 16px;
+}
+.section-compl{
+    padding: 72px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.compl{
+    display: flex;
+    justify-content: center;
+    gap: 72px; /* Espaçamento entre as cards */
+}
+.compl__item{
+    flex: 1 1 calc(33.333% - 32px); /* Cards responsivos que ocupam um terço da largura */
+    max-width: 300px; /* Limita a largura máxima das cards */
+    background-color: var(--branco);
+    border: 2px solid #ff0000ea;
+    border-radius: 8px;
+    padding: 24px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.compl__item:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+/* Sou PCD */
+.section-pcd{
+    padding: 72px;
+    color: var(--branco);
+    background-color: var(--azulSegundario);
+}
