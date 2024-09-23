@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Seleciona a imagem do header
     const imgElement = new Image();
-    imgElement.src = './assets/fundo.png';
+    imgElement.src = '/assets/fundo.png';
     imgElement.onload = function() {
         compress.compress([imgElement], {
             size: 4, // o tamanho máximo do arquivo de saída em MB

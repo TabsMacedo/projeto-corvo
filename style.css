@@ -247,24 +247,18 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 40px;
 }
-.section__title {
-    text-align: center;
-    font-size: 1.5rem;
+.values-section h2{
+    border-bottom: 4px solid var(--azulSegundario);
     text-transform: uppercase;
-    display: inline-block; /* Ajusta a largura da div ao conteúdo */
-    border-bottom: var(--azulSegundario) 4px solid;
 }
-
-.section__title h2 {
-    width: auto;
-    display: inline-block; /* Faz com que o h2 tenha largura baseada no conteúdo */
-    margin: 0; /* Remove margens padrão que podem causar desalinhamento */
+.section__main{
+    display: flex;  
 }
 .our-values{
     width: 100%;
     display: flex;
-    margin: 72px;
     justify-content: center;
     gap: 32px;
     flex-wrap: wrap;
@@ -294,6 +288,9 @@ body {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto auto;
     gap: 40px; /* Aumenta o espaçamento entre os elementos */
+}
+.section-part img {
+    filter: invert(40%) sepia(100%) saturate(500%) hue-rotate(-25deg) brightness(100%) contrast(100%);
 }
 
 /* Título da seção */
