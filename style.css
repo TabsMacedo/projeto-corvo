@@ -327,11 +327,10 @@ body {
 }
 /* Sessão "Nossos Valores" */
 .values-section {
-    padding: 72px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 40px;
+    padding: 64px 64px 92px;
     background-color: var(--branco); 
     border-radius: 12px; 
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); 
@@ -340,11 +339,12 @@ body {
 
 .values-section h2 {
     font-family: "Lato", sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     font-size: 2.5rem;
     color: #333;
+    font-weight: 600;
     text-transform: uppercase;
     position: relative;
-    padding-bottom: 12px;
     border-bottom: 4px solid var(--azulSegundario);
     letter-spacing: 1.5px;
 
@@ -357,7 +357,6 @@ body {
     gap: 32px;
     flex-wrap: wrap;
     width: 100%;
-    
     max-width: 1200px; 
     margin-top: 40px;
 }
@@ -383,6 +382,7 @@ body {
     font-size: 1.5rem;
     font-weight: bold;
     text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     color: var(--azulSegundario);
     margin-top: 16px;
 }
@@ -428,9 +428,11 @@ body {
 
 .part-title h2 {
     color: #333;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-size: 2.5rem;
+    font-weight: 600;
     display: inline-block;
     border-bottom: 4px solid var(--azulSegundario); 
-    letter-spacing: 1px; 
 }
 .part-title p{
     font-size: 2rem;
@@ -939,25 +941,42 @@ body {
 
 /* Ajustes Específicos para Dispositivos até 469px */
 @media (max-width: 469px) {
-
-    .about-section,
-    .section-part,
-    .location,
-    .section-contact,
-    .informacoes-complementares {
-        padding: 20px 16px; /* Menos padding */
+ .navbar{
+    width: 100%;
+    margin: 0;
+ }
+    .navbar p{
+        visibility: hidden;
     }
+
+  .us__right{
+    padding: 16px;
+  }
 
     /* Ajustes de fonte ainda menores */
     .about-section h2,
     .section-part h2,
     .location h2,
     .section-contact h2,
-    .informacoes-complementares h2 {
-        font-size: 28px; /* Tamanho do título reduzido para 28px */
+    .values-section h2,
+    .section-compl h2,
+    .section-pcd h2,
+    .location h3,
+    .informacoes-complementares h2,
+    .contact-item h3 {
+        font-size: 24px; /* Tamanho do título reduzido para 28px */
         margin-bottom: 10px; /* Espaço abaixo do título */
+        text-align: center;
+        font-weight: 700;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+    .our-values h3, .part-title p{
+        font-size: 18px;
     }
 
+    .values-section, .section-part, .section-compl, .section-pcd, .location, .section-contact{
+        padding: 32px;
+    }
     .part__title {
         font-size: 16px; /* Ajuste para telas menores */
     }
