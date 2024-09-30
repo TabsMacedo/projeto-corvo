@@ -411,7 +411,7 @@ body {
     padding: 72px 20px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Layout responsivo */
-    gap: 40px; /* Espaçamento entre os elementos */
+    gap: 16px; /* Espaçamento entre os elementos */
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra mais pronunciada */
     transition: all 0.3s ease;
@@ -422,7 +422,6 @@ body {
     text-align: center;
     font-weight: 700;
     text-transform: uppercase;
-    margin-bottom: 40px;
     color: var(--azulSegundario);
 }
 
@@ -791,169 +790,130 @@ body {
     gap: 16px;
 }
 @media (max-width: 768px) {
-    /* Margens gerais */
+    /* Margens e Padding Gerais */
     body {
-        margin: 0 16px; /* Margens de 16px à esquerda e à direita */
+        margin: 0 16px;
     }
- 
-    .nav-intro{
+
+    .nav-intro,
+    .about-us,
+    .about-section,
+    .section-part,
+    .location,
+    .section-contact,
+    .informacoes-complementares {
         padding: 16px;
-        height: auto;
     }
-    .nav-intro h2{
+
+    .nav-intro h2,
+    .section-part h2,
+    .location h2,
+    .section-contact h2,
+    .informacoes-complementares h2,
+    .card__item h3 {
         font-size: 28px;
+        margin-bottom: 15px;
+        font-weight: 700;
     }
-    .btn.btn-one.menu{
+
+    /* Navbar */
+    .navbar {
+        width: 100%;
+        margin: 0;
+    }
+
+    .navbar p {
+        visibility: hidden;
+    }
+
+    .btn.btn-one.menu {
         display: none;
     }
+
+    /* Botão de Voltar ao Topo */
     .back-to-top-btn {
         visibility: visible;
-        display: block; /* Ou inline-block */
-        position: fixed; /* Certifique-se de que o botão está posicionado corretamente */
-        bottom: 20px; /* Posição na tela */
+        display: block;
+        position: fixed;
+        bottom: 20px;
         right: 8px;
-        z-index: 100; /* Garante que ele fique acima de outros elementos */
+        z-index: 100;
     }
+
     /* Seção Sobre */
     .about-section {
-        padding: 30px 5px; /* Menos padding para telas menores */
-        flex-direction: column; /* Empilha os itens */
-        align-items: center; /* Centraliza os itens */
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
     }
 
     .about-us {
-        flex-direction: column; /* Empilha as colunas */
-        padding: 16px;
-        align-items: center; /* Centraliza os itens */
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
     }
 
     .us__left, .us__right {
-        width: 100%; /* 100% de largura em telas pequenas */
-        opacity: 1; /* Mantém a opacidade */
-        transform: translateY(0); /* Remove o efeito de animação */
+        width: 100%;
+        opacity: 1;
+        transform: translateY(0);
     }
-
-    /* Ajustes de fonte para a Seção Sobre */
+  
     .about-section h2 {
-        font-size: 28px; /* Tamanho do título definido para 28px */
-        margin-bottom: 15px; /* Espaço abaixo do título */
+        font-size: 18px;
     }
 
-    .about-section p {
-        font-size: 16px; /* Tamanho do texto definido para 16px */
-        line-height: 1.4; /* Melhora a legibilidade */
-    }
-    .values-section h2{
-        font-size: 28px;
+    .about-section p,
+    .section-part p,
+    .location-left p,
+    .location-right p,
+    .contact-form input,
+    .contact-form textarea,
+    .informacoes-complementares p {
+        font-size: 16px;
+        line-height: 1.4;
     }
 
     /* Seção Como Participar */
     .section-part {
-        padding: 30px 16px; /* Menos padding para telas menores */
-        grid-template-columns: 1fr; /* Coloca todos em uma coluna */
+        grid-template-columns: 1fr;
     }
 
     .card__item {
-        flex: 1 1 100%; /* 100% de largura em telas pequenas */
+        flex: 1 1 100%;
     }
 
-    /* Ajustes de fonte para a Seção Como Participar */
-    .section-part h2 {
-        font-size: 28px; /* Tamanho do título definido para 28px */
-        margin-bottom: 15px; /* Espaço abaixo do título */
-    }
-    .part-title p{
-        font-size: 18px;
-    }
-
-
-    .card__item p {
-        font-size: 16px; /* Tamanho do texto definido para 16px */
-        line-height: 1.4; /* Melhora a legibilidade */
+    .card__item img {
+        width: 48px;
+        height: 48px;
     }
 
     /* Seção Localização */
-    .location {
-        padding: 30px ; /* Menos padding para telas menores */
-    }
-
     .location-itens {
-        flex-direction: column; /* Empilha os itens */
-        align-items: center; /* Centraliza os itens */
+        flex-direction: column;
+        align-items: center;
     }
 
     .location-left, .location-right {
-        width: 100%; /* 100% de largura em telas pequenas */
-        margin-bottom: 15px; /* Espaçamento entre os itens */
-    }
-
-    /* Ajustes de fonte para a Seção Localização */
-    .location h2 {
-        font-size: 28px; /* Tamanho do título definido para 28px */
-        margin-bottom: 15px; /* Espaço abaixo do título */
-    }
-
-    .location-left p,
-    .location-right p {
-        font-size: 16px; /* Tamanho do texto definido para 16px */
-        line-height: 1.4; /* Melhora a legibilidade */
+        width: 100%;
+        margin-bottom: 15px;
     }
 
     /* Seção Contato */
     .section-contact {
-        grid-template-columns: 1fr; /* Coloca todos em uma coluna */
-        padding: 30px 5px; /* Menos padding para telas menores */
-    }
-
-    .contact-form {
-        width: 100%; /* 100% de largura em telas pequenas */
-    }
-
-    /* Ajustes de fonte para a Seção Contato */
-    .section-contact h2 {
-        font-size: 28px; /* Tamanho do título definido para 28px */
-        margin-bottom: 15px; /* Espaço abaixo do título */
-    }
-
-    .contact-form input,
-    .contact-form textarea {
-        font-size: 16px; /* Tamanho do texto definido para 16px nos campos */
-    }
-
-    /* Seção Informações Complementares */
-    .informacoes-complementares {
-        display: flex; /* Define a exibição como flex */
-        flex-direction: column; /* Coloca os itens em coluna */
-        align-items: center; /* Centraliza os itens */
-        margin: 20px 0; /* Espaço acima e abaixo */
-    }
-
-    .informacoes-complementares h2 {
-        font-size: 28px; /* Tamanho do título definido para 28px */
-        margin-bottom: 15px; /* Espaço abaixo do título */
-    }
-
-    .informacoes-complementares p {
-        font-size: 16px; /* Tamanho do texto definido para 16px */
-        line-height: 1.4; /* Melhora a legibilidade */
+        grid-template-columns: 1fr;
     }
 }
 
-/* Ajustes Específicos para Dispositivos até 469px */
 @media (max-width: 469px) {
- .navbar{
-    width: 100%;
-    margin: 0;
- }
-    .navbar p{
-        visibility: hidden;
+    .navbar {
+        width: 100%;
+        margin: 0;
     }
-
-  .us__right{
-    padding: 16px;
-  }
-
-    /* Ajustes de fonte ainda menores */
+    .us__left{
+        padding: 0;
+        margin: 0;
+    }
     .about-section h2,
     .section-part h2,
     .location h2,
@@ -964,21 +924,29 @@ body {
     .location h3,
     .informacoes-complementares h2,
     .contact-item h3 {
-        font-size: 24px; /* Tamanho do título reduzido para 28px */
-        margin-bottom: 10px; /* Espaço abaixo do título */
+        font-size: 24px;
+        margin-bottom: 10px;
         text-align: center;
         font-weight: 700;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     }
-    .our-values h3, .part-title p{
+
+    .our-values h3,
+    .part-title p {
         font-size: 18px;
     }
 
-    .values-section, .section-part, .section-compl, .section-pcd, .location, .section-contact{
+    .values-section,
+    .section-part,
+    .section-compl,
+    .section-pcd,
+    .location,
+    .section-contact {
         padding: 32px;
     }
+
     .part__title {
-        font-size: 16px; /* Ajuste para telas menores */
+        font-size: 16px;
     }
 
     .about-section p,
@@ -988,7 +956,7 @@ body {
     .contact-form input,
     .contact-form textarea,
     .informacoes-complementares p {
-        font-size: 16px; /* Tamanho do texto fixado em 16px */
-        line-height: 1.3; /* Melhora a legibilidade */
+        font-size: 16px;
+        line-height: 1.3;
     }
 }
