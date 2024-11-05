@@ -23,7 +23,7 @@ body {
 }
 
 .header {
-   background: url(../assets/fundo.png);
+   background: url(fundo.png);
     height: 600px;
     background-size: cover;
     background-position: center;
@@ -117,7 +117,7 @@ body {
     font-weight: 700;
     text-shadow: 0 4px 8px black;
     position: relative;
-    transition: height 0.5s ease; /* Transição suave */
+    transition: height 0.5s ease; 
 }
 
 .nav-intro h2 {
@@ -191,11 +191,25 @@ body {
     opacity: 0; 
     transform: scale(0.1, 1);
 }
+
+.btn-one a {
+    color: var(--branco); 
+    text-decoration: none; 
+    font-weight: bold; 
+    padding: 8px; 
+    border-radius: 4px; 
+    transition: background-color 0.3s, color 0.3s; /* Transição suave */
+}
+
+.btn-one a:hover {
+    background-color: var(--azulSegundario); /* Cor de fundo ao passar o mouse */
+    color: var(--branco); /* Cor do texto ao passar o mouse */
+}
 .back-to-top-btn {
     position: fixed;
     visibility: hidden;
     right: 8px;
-    display: none; /* Oculto por padrão */
+    display: none;
     background-color: #FF5722;
     color: white;
     border: none;
@@ -218,6 +232,7 @@ body {
 .back-to-top-btn:hover {
     background-color: #e64a19;
 }
+
   
 /* Sessão sobre */
 .about-section {
@@ -232,10 +247,6 @@ body {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.about-section:hover {
-    transform: translateY(-5px); 
-    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
-}
 
 #title-about {
     text-align: center;
@@ -320,10 +331,26 @@ body {
     color: var(--laranjaPrimario);
     font-size: 16px;
 }
+/* Posição inicial fora da tela */
+.us__left, .us__right {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1.5s ease, transform 1.5s ease;
+}
 
-.about-us:hover .us__left, .about-us:hover .us__right {
+/* Posição inicial específica */
+.us__left {
+    transform: translateX(-100px); /* Vem da esquerda */
+}
+
+.us__right {
+    transform: translateX(100px); 
+}
+
+
+.show {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateX(0); 
 }
 /* Sessão "Nossos Valores" */
 .values-section {
@@ -728,7 +755,7 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 32px;
-    padding: 72px 24px;
+    padding: 48px 0 48px 48px;
     background-color: #044ba8; 
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     margin-top: 40px;
@@ -784,13 +811,19 @@ body {
 }
 
 /* Social Media Icons */
-.social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 16px;
+.social-icons a {
+    margin: 0 10px; 
+    font-size: 24px;
+    color: var(--branco);
+    text-decoration: none; 
 }
+
+.social-icons a:hover {
+    color: var(--laranjaPrimario); 
+}
+
 @media (max-width: 768px) {
-    /* Margens e Padding Gerais */
+   
     body {
         margin: 0 16px;
     }

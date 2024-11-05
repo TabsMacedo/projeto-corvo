@@ -6,12 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Corredores Voluntários</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="./assets/favicon-16x16.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./favicon-16x16.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <script defer src="./script.js"></script>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script defer src="./script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Compress Js -->
     <script src="https://cdn.jsdelivr.net/npm/compress.js/dist/compress.min.js"></script>
@@ -22,7 +20,7 @@
         <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
-                    <img id="logo-principal" src="./assets/logosuperior.png" alt="logo principal">
+                    <img id="logo-principal" src="logosuperior.png" alt="logo principal">
                     <p>CORREDORES<br> VOLUNTÁRIOS</p>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -33,8 +31,8 @@
                     <ul class="navbar-nav ms-auto container-menu">
                         <li class="nav-item"><a class="nav-link" href="#">HOME</a></li>
                         <li class="nav-item"><a class="nav-link" href="./agenda/agenda.html">AGENDA</a></li>
-                        <li class="nav-item"><a class="nav-link" href="./quemSomos/quemSomos.html">QUEM SOMOS</a></li>
-                        <li class="nav-item"><a class="nav-link" href="./nossaMissao/missao.html">NOSSA MISSÃO</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about-us">QUEM SOMOS</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about-values">NOSSA MISSÃO</a></li>
                     </ul>
                     <div class="btn btn-one menu" style="width: 150px;">
                         <span>CADASTRAR</span>
@@ -45,9 +43,7 @@
         <div class="nav-intro">
             <h2>Inflamando almas, inspirando a mudança</h2>
             <p>...Seja um voluntário ou apoiador dessa ideia!</p>
-            <div class="btn btn-one" style="width: 220px;">
-                <span>COMO PARTICIPAR</span>
-            </div>
+            <a href="#how-partic" class="btn btn-one" style="width: 220px;">COMO PARTICIPAR</a>
         </div>
         <a href="#home" id="backToTopLink">
             <button id="backToTopBtn" class="back-to-top-btn">
@@ -57,7 +53,7 @@
        
     </header>
     
-    <section class="about-section">
+    <section class="about-section" id="about-us">
         <h2 id="title-about">SOBRE A CORREDORES VOLUNTÁRIOS</h2>
         <div class="about-us">
             <div class="us__left">
@@ -77,7 +73,7 @@
         </div>
     </section>
     
-    <section class="values-section bg-white ">
+    <section class="values-section bg-white " id="about-values">
         <h2>Nossos Valores</h2>
         <div class="section__main">
             <div class="our-values">
@@ -105,7 +101,7 @@
         </div>
     </section>    
 
-    <main class="section-part">
+    <main class="section-part"  id="how-partic">
         <section class="part-title">
             <h2>Como participar?</h2>
             <p>Passo a passo de como participar dos Corredores Voluntários</p>
@@ -174,7 +170,7 @@
     
     <section class="section-pcd">
         <h2>Sou PCD (pessoa com deficiência), como posso participar?</h2>
-        <p>Se você é PCD e deseja participar de um evento do Pernas de Aluguel e não é assistido pelas instituições que o IPDA (Instituto Pernas de Aluguel) apoia*, siga os passos abaixo:</p>
+        <p>Se você é PCD e deseja participar de um evento do Corredores Voluntários e não é assistido pelas instituições que o CORVO (Corredores Voluntários) apoia*, siga os passos abaixo:</p>
     
         <article class="pcd">
             <div class="pcd__item">
@@ -241,16 +237,22 @@
         <div class="contact-item">
             <h3>Social:</h3>
             <div class="social-icons">
-                <a href="https://facebook.com" target="_blank">/Facebook</a>
-                <a href="https://instagram.com" target="_blank">/Instagram</a>
+                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
             </div>
         </div>
+        <div id="ss_gmo_globalsign_secured_site_seal" style="width:100px; height:50px;">
+            <a href="https://www.globalsign.com/en/" target="_blank">
+                <img src="https://www.locaweb.com.br/images/produtos/ssl-locaweb/global-sign-1.webp" alt="Selo GlobalSign Secure" style="border:0; width:100%;">
+            </a>
+        </div>     
     </section>
     <footer>
-        <!-- Conteúdo do rodapé -->
-        <div></div>
+        <div style="text-align:center; padding: 10px;">
+            <p>&copy; 2024 Corredores Voluntários. Todos os direitos reservados.</p>
+        </div>
     </footer>
-
+    <script src="./script.js"></script>
 </body>
 
 </html>
