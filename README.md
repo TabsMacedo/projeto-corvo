@@ -1,14 +1,12 @@
 # Landing Page - Corredores Voluntários
-![Logo]
+<img src="https://github.com/user-attachments/assets/096a86b0-2f5f-41ad-8f2d-38c8adbfd8ab" alt="Logo" width="100"/>
 
 ## :bookmark_tabs: Menu
 * [Overview](#scroll-overview)
 * [Screenshot](#rice_scene-screenshot)
 * [Demo](#dvd-demo)
-* [Documentation](#blue_book-documentation)
 * [Requirements](#heavy_exclamation_mark-requirements)
 * [Installation and usage](#installation-and-usage)
-* [Tests](#tests)
 * [Dependencies and libs](#dependencies-and-libs)
 * [Folder Structure](#folder-structure)
 * [Release History](#release-history)
@@ -32,11 +30,11 @@ O certificado SSL foi configurado para garantir a segurança das informações d
 Este projeto visa oferecer uma landing page simples, eficiente e acessível, com foco em atender aos usuários da ONG "Corredores Voluntários" em Campinas.
 
 ## :rice_scene: Screenshot
+![Image](https://github.com/user-attachments/assets/158d6174-c8e3-489f-97b9-42773c0fce65)
 
-## :dvd: Demo
+## :dvd: Demonstração
+Confira a demonstração do site: [Corredores Voluntários](https://corredoresvoluntarios.org.br/)
 
-## :blue_book: Documentation
-A documentação completa do sistema será disponibilizada em breve.
 
 ## :heavy_exclamation_mark: Requirements
 * Navegador moderno (Chrome, Firefox, Edge)
@@ -51,9 +49,6 @@ git clone https://github.com/TabsMacedo/corredores-voluntarios-landing-page.git
 
 ## Installation and usage
 Para rodar a página localmente, basta abrir o arquivo `index.html` no seu navegador.
-
-## :ballot_box_with_check: Tests
-Ainda não há testes automatizados disponíveis para este projeto.
 
 ## :package: Dependencies and libs
 - [Bootstrap] - Framework para o design responsivo (caso queira fazer ajustes no layout)
