@@ -113,7 +113,6 @@ Ainda não há testes automatizados disponíveis para este projeto.
 
 ## :bell: Tasks
 - [x] Criar estrutura inicial do projeto
-- [x] Configurar banco de dados
 - [x] Implementar interface de administração
 - [ ] Adicionar testes automatizados
 
