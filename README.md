@@ -53,7 +53,7 @@ Para rodar a página localmente, basta abrir o arquivo `index.html` no seu naveg
 ## :package: Dependencies and libs
 - [Bootstrap] - Framework para o design responsivo (caso queira fazer ajustes no layout)
 
-## :release_history: Release History
+## :bookmark_tabs: Release History
 - 0.1.0
   - Init: Primeira versão da Landing Page "Corredores Voluntários"
 
