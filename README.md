@@ -1,6 +1,6 @@
 # Landing Page - Corredores Voluntários
 
-![Logo](https://www.skyhub.bio/wp-content/uploads/2021/09/kidopi.png)
+![Logo]
 
 ## :bookmark_tabs: Menu
 * [Overview](#scroll-overview)
